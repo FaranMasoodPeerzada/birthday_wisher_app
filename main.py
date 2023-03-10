@@ -13,7 +13,7 @@ with open('birthdays.csv', 'w', newline='') as file:
     writer.writerow(["Ash Ketchum", "English@yahoo.com","1993","4","10"])
     writer.writerow(["Gary Oak", "Mathematics@yahoo.com","1993","4","12"])
     writer.writerow(["Brock Lesner", "Physics@yahoo.com","1993","4","12"])
-    writer.writerow(["Faran", "faranmasood@yahoo.com","1993","3","11"])
+    writer.writerow(["Faran", "faranpeerzada253@yahoo.com","1993","3","11"])
 # 2. Check if today matches a birthday in the birthdays.csv
 import datetime as dt
 now=dt.datetime.now()
@@ -32,7 +32,7 @@ if today in birthday_dict:
     birthday_person=birthday_dict[today]
     name=birthday_person['name']
 
-    file_path=f"letter_templates/letter_{number}.txt"
+    file_path=f"letter_{number}.txt"
     with open(file_path,'r') as letter:
         contents=letter.read()
         new_mail=contents.replace('[NAME]',birthday_person['name'])
